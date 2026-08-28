@@ -1,0 +1,19 @@
+[package]
+name = "rp2350-trigger-delay"
+version = "0.1.0"
+edition = "2024"
+
+publish = false
+
+[dependencies]
+
+embassy-executor = { version = "*", features = ["defmt"] }
+embassy-rp = { version = "*", features = ["defmt", "unstable-pac", "time-driver", "critical-section-impl", "rp235xa", "binary-info", "executor-thread", "executor-interrupt"] }
+embassy-time = { version = "*", features = ["defmt", "defmt-timestamp-uptime"] }
+
+cortex-m = "*"
+cortex-m-rt = "*"
+
+defmt = "*"
+defmt-rtt ="*"
+panic-probe = { version = "*", features = ["print-defmt"] }

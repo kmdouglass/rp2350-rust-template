@@ -23,6 +23,8 @@ pkgs.mkShellNoCC {
         "rust-src"
         "clippy"
         "rust-analyzer"
+        "rust-fmt"
+        "llvm-tools"
       ];
       targets = [
         "thumbv8m.main-none-eabihf"
