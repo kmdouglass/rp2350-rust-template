@@ -14,7 +14,7 @@ let
 in
 
 pkgs.mkShellNoCC {
-  name = "RP2350 Trigger Delay";
+  name = "RP2350 Rust Template";
   
   packages = with pkgs; [
     probe-rs-tools
