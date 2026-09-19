@@ -8,10 +8,9 @@ publish = false
 [dependencies]
 
 embassy-executor = { version = "*", features = ["defmt"] }
-embassy-rp = { version = "*", features = ["defmt", "unstable-pac", "time-driver", "critical-section-impl", "rp235xa", "binary-info", "executor-thread", "executor-interrupt"] }
+embassy-rp = { version = "*", features = ["defmt", "time-driver", "critical-section-impl", "rp235xa", "binary-info", "executor-thread"] }
 embassy-time = { version = "*", features = ["defmt", "defmt-timestamp-uptime"] }
 
-cortex-m = "*"
 cortex-m-rt = "*"
 
 defmt = "*"
