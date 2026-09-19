@@ -1,13 +1,13 @@
 let
 
   nixpkgs = fetchTarball {
-    url = "https://github.com/NixOS/nixpkgs/archive/c27cdad491a991b11ed731760aa2ef8db0cb0410.tar.gz";
-    sha256 = "1r58xn9xdka8bw710i431srl3dmy7dyrhd32rjv709f2mkb6m1ix";
+    url = "https://github.com/NixOS/nixpkgs/archive/e554fab72f81915600f3f449b786fd9af40439a5.tar.gz";
+    sha256 = "08qq3a6ry3sjm916cgwgd5421fddpk5jic8j4ssll9c8zmxm9a34";
   };
 
   rust-overlay = fetchTarball{
-    url = "https://github.com/oxalica/rust-overlay/archive/dc2fd1acc537f3583744e1373597a5731ff7a6e3.tar.gz";
-    sha256 = "1afpvg7m4jm7nf5algsd6mnfqww37rgvxlib4jfff81qgnmayx4d";
+    url = "https://github.com/oxalica/rust-overlay/archive/26a71e661c47bd21a05d06fec749f3f7c75e9d12.tar.gz";
+    sha256 = "06qfbyigdlazd1hpad515w5gdgjha7p5fic75c306sfqnq15yla1";
   };
 
   pkgs = import nixpkgs { config = {}; overlays = [ (import rust-overlay)]; };
@@ -23,7 +23,7 @@ pkgs.mkShellNoCC {
         "rust-src"
         "clippy"
         "rust-analyzer"
-        "rust-fmt"
+        "rustfmt"
         "llvm-tools"
       ];
       targets = [
